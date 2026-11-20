@@ -1,0 +1,45 @@
+[gd_scene load_steps=7 format=3 uid="uid://epkl0lbi5eky"]
+
+[ext_resource type="Texture2D" uid="uid://boxnbyynk4154" path="res://icon.svg" id="1_jlxxf"]
+[ext_resource type="Script" uid="uid://wrukn77b1trf" path="res://Scenes/enemy_sprite_2D.gd" id="2_g655o"]
+
+[sub_resource type="Gradient" id="Gradient_jlxxf"]
+colors = PackedColorArray(0, 0, 0, 1, 1, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_g655o"]
+gradient = SubResource("Gradient_jlxxf")
+
+[sub_resource type="Gradient" id="Gradient_ws2tf"]
+colors = PackedColorArray(1, 1, 0, 1, 0, 1, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_2kgvx"]
+gradient = SubResource("Gradient_ws2tf")
+
+[node name="EnemySprite2D" type="Sprite2D"]
+texture = ExtResource("1_jlxxf")
+script = ExtResource("2_g655o")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -84.0
+offset_top = -128.0
+offset_right = -44.0
+offset_bottom = -88.0
+grow_horizontal = 2
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="Control"]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -128.0
+offset_right = 128.0
+offset_bottom = 40.0
+grow_horizontal = 2
+nine_patch_stretch = true
+texture_under = SubResource("GradientTexture1D_g655o")
+texture_progress = SubResource("GradientTexture1D_2kgvx")

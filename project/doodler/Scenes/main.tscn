@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://bejayr1spl6l6"]
+
+[ext_resource type="PackedScene" uid="uid://epkl0lbi5eky" path="res://Scenes/enemy_sprite_2d.tscn" id="1_jjgbg"]
+[ext_resource type="Script" uid="uid://81h8fo6l104h" path="res://Scenes/button.gd" id="2_bo1nx"]
+
+[node name="Main" type="Node2D"]
+
+[node name="EnemySprite2D" parent="." instance=ExtResource("1_jjgbg")]
+position = Vector2(448, 256)
+
+[node name="Button" type="Button" parent="."]
+offset_left = 576.0
+offset_top = 256.0
+offset_right = 662.0
+offset_bottom = 287.0
+scale = Vector2(4.24, 4.6)
+text = "Damage 3"
+script = ExtResource("2_bo1nx")
+damageToDo = 3
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 616.00006
+offset_top = 72.0
+offset_right = 702.00006
+offset_bottom = 103.0
+scale = Vector2(4.24, 4.6)
+text = "Heal 2"
+script = ExtResource("2_bo1nx")
+damageToDo = -2
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+[connection signal="pressed" from="Button2" to="Button2" method="_on_pressed"]
