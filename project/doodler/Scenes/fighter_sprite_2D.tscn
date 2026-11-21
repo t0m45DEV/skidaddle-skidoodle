@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://epkl0lbi5eky"]
 
 [ext_resource type="Texture2D" uid="uid://boxnbyynk4154" path="res://icon.svg" id="1_jlxxf"]
-[ext_resource type="Script" uid="uid://wrukn77b1trf" path="res://Scenes/enemy_sprite_2D.gd" id="2_g655o"]
+[ext_resource type="Script" uid="uid://dleu3s54p0oo6" path="res://Scenes/fighter_sprite_2D.gd" id="2_5r44q"]
 
 [sub_resource type="Gradient" id="Gradient_jlxxf"]
 colors = PackedColorArray(0, 0, 0, 1, 1, 0, 0, 1)
@@ -10,14 +10,14 @@ colors = PackedColorArray(0, 0, 0, 1, 1, 0, 0, 1)
 gradient = SubResource("Gradient_jlxxf")
 
 [sub_resource type="Gradient" id="Gradient_ws2tf"]
-colors = PackedColorArray(1, 1, 0, 1, 0, 1, 0, 1)
+colors = PackedColorArray(0, 1, 0, 1, 1, 1, 1, 1)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_2kgvx"]
 gradient = SubResource("Gradient_ws2tf")
 
-[node name="EnemySprite2D" type="Sprite2D"]
+[node name="FighterSprite2D" type="Sprite2D"]
 texture = ExtResource("1_jlxxf")
-script = ExtResource("2_g655o")
+script = ExtResource("2_5r44q")
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3

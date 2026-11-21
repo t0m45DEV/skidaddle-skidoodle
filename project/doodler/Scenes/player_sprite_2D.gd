@@ -1,0 +1,2 @@
+extends FighterSprite2D
+class_name PlayerSprite2D

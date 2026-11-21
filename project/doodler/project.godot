@@ -14,3 +14,10 @@ config/name="Doodler"
 run/main_scene="uid://bejayr1spl6l6"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
+
+[file_customization]
+
+folder_colors={
+"res://Scenes/": "blue",
+"res://Temp/": "yellow"
+}
