@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Enemy_Data" load_steps=2 format=3 uid="uid://crrs4sa4fwemf"]
+
+[ext_resource type="Script" uid="uid://b6si3q6ywg50d" path="res://Scenes/enemy_data.gd" id="1_qtnb1"]
+
+[resource]
+script = ExtResource("1_qtnb1")
+max_HP = 16
+strength = 3
+abilities = Array[StringName]([&"object_nariz_payaso"])
