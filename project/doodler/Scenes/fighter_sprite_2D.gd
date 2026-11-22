@@ -7,6 +7,8 @@ class_name  FighterSprite2D
 
 @onready var HP_bar : TextureProgressBar = $Control/TextureProgressBar
 
+var abilities : Array[Callable] = []
+
 func _ready() -> void:
 	HP = maxHP
 	

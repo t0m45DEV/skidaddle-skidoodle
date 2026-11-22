@@ -15,9 +15,14 @@ run/main_scene="uid://bejayr1spl6l6"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Objects="*res://Scenes/objects.gd"
+
 [file_customization]
 
 folder_colors={
+"res://Enemies/": "red",
 "res://Scenes/": "blue",
 "res://Temp/": "yellow"
 }
