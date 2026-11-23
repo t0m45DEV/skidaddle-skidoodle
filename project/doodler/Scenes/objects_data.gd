@@ -16,5 +16,7 @@ func execute(source :FighterSprite2D, target : FighterSprite2D) -> String:
 		push_error("La acción '" + self.action + "' no fue encontrada por el objeto '" + self.name + "'.")
 		return ""
 	
+	var message : String = Callable(Objects, self.action).call(source, target)
 	self.used = true
-	return Callable(Objects, self.action).call(source, target)
+	
+	return message

@@ -5,7 +5,10 @@ func object_ataque_normal(_source : FighterSprite2D, _target : FighterSprite2D) 
 	
 	# Si la accion fue ejecutada por el jugador.
 	if _source is PlayerSprite2D:
-		return "Haces " + str(_source.strength) + " puntos de daño al enemigo."
+		if _source.strength == 1:
+			return "Haces " + str(_source.strength) + " punto de daño al enemigo."
+		else:
+			return "Haces " + str(_source.strength) + " puntos de daño al enemigo."
 	else:
 		return "El enemigo te hace " + str(_source.strength) + " puntos de daño."
 
@@ -19,7 +22,7 @@ func object_cura_normal(_source : FighterSprite2D, _target : FighterSprite2D) ->
 		return "El enemigo recupera " + str(_source.heal_ammount) + " puntos de vida."
 
 func object_nariz_payaso(_source : FighterSprite2D, _target : FighterSprite2D) -> String:
-	_target.strength -= 1
+	_target.strength = max(1, _target.strength - 1)
 	
 	# Si la accion fue ejecutada por el jugador.
 	if _source is PlayerSprite2D:

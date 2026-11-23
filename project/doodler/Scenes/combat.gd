@@ -14,9 +14,16 @@ extends Node2D
 var is_player_turn : bool = true
 
 func show_effect(effect : String) -> void:
-	current_effect.clear()
+	animations.stop()
+	current_effect.visible_ratio = 0.0
 	current_effect.set_text(effect)
 	animations.play("effect")
+
+func disable_buttons() -> void:
+	attack_button.disabled = true
+	heal_button.disabled = true
+	special1_button.disabled = true
+	special2_button.disabled = true
 
 func _ready() -> void:
 	attack_button.update_state("Attack")
@@ -36,23 +43,21 @@ func _ready() -> void:
 
 func _on_button_attack_pressed() -> void:
 	show_effect(Objects.object_ataque_normal(player, enemy))
+	disable_buttons()
 
 func _on_button_heal_pressed() -> void:
 	show_effect(Objects.object_cura_normal(player, enemy))
+	disable_buttons()
 
 func _on_button_special1_pressed() -> void:
 	show_effect(player.abilities[0].execute(player, enemy))
 	special1_button.visible = false
+	disable_buttons()
 
 func _on_button_special2_pressed() -> void:
 	show_effect(player.abilities[1].execute(player, enemy))
 	special2_button.visible = false
-
-func _on_animation_player_animation_started(_anim_name: StringName) -> void:
-	attack_button.disabled = true
-	heal_button.disabled = true
-	special1_button.disabled = true
-	special2_button.disabled = true
+	disable_buttons()
 
 func _on_animation_player_animation_finished(_anim_name: StringName) -> void:
 	current_effect.clear()
