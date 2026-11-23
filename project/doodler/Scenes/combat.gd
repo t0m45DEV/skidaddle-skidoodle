@@ -13,6 +13,9 @@ extends Node2D
 
 var is_player_turn : bool = true
 
+var player_won : bool = false
+var enemy_won : bool = false
+
 func show_effect(effect : String) -> void:
 	animations.stop()
 	current_effect.visible_ratio = 0.0
@@ -72,17 +75,21 @@ func _on_animation_player_animation_finished(_anim_name: StringName) -> void:
 			special2_button.disabled = false
 		
 		is_player_turn = not is_player_turn
+		
+		if player_won:
+			animations.play("enemy_died")
+		elif enemy_won:
+			animations.play("player_died")
+		
 	elif _anim_name == "player_died":
 		get_tree().change_scene_to_file("res://Menus/game_over.tscn")
 	elif _anim_name == "enemy_died":
 		get_tree().change_scene_to_file("res://Menus/you_win.tscn")
 
-
 func _on_enemy_died() -> void:
-	print("malo died")
-	animations.play("enemy_died")
-
+	player_won = true
+	enemy_won = false
 
 func _on_player_died() -> void:
-	print("player died")
-	animations.play("player_died")
+	player_won = false
+	enemy_won = true
