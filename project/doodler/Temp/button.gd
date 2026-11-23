@@ -1,6 +1,6 @@
+class_name action_button
 extends Button
 
-@export var target : FighterSprite2D
-
-func _on_pressed() -> void:
-	$"../EnemySprite2D".attack(target)
+func update_state(new_text : String) -> void:
+	self.set_text(new_text)
+	self.visible = true

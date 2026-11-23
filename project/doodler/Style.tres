@@ -1,0 +1,10 @@
+[gd_resource type="Theme" format=3 uid="uid://de5w4yfr8tf5e"]
+
+[resource]
+Button/font_sizes/font_size = 36
+HBoxContainer/constants/separation = 50
+MarginContainer/constants/margin_bottom = 40
+MarginContainer/constants/margin_left = 20
+MarginContainer/constants/margin_right = 20
+MarginContainer/constants/margin_top = 20
+VBoxContainer/constants/separation = 20

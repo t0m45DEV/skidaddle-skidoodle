@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Object_Data" load_steps=2 format=3 uid="uid://bqhvmd6c1ehr0"]
+
+[ext_resource type="Script" uid="uid://1b3b510wll5g" path="res://Scenes/objects_data.gd" id="1_5auof"]
+
+[resource]
+script = ExtResource("1_5auof")
+name = "Globo"
+action = &"object_globo"
+metadata/_custom_type_script = "uid://1b3b510wll5g"

@@ -1,6 +1,7 @@
 extends FighterSprite2D
 class_name EnemySprite2D
 
+# Tiene que ser el MISMO NOMBRE que el archivo 'monstruo.tres' en la carpeta 'Enemies'
 const enemies : Array[String] = [
 	"skeleton",
 	"dinosaur"
@@ -18,7 +19,7 @@ func _ready() -> void:
 		self.abilities = []
 		
 		for f in data.abilities:
-			if Objects.has_method(f):
-				self.abilities.append(Callable(Objects, f))
-			else:
-				push_warning("La habilidad '" + f + "' no existe en 'objects.gd'.")
+			self.abilities.append(f)
+	
+	# Vuelvo a llamar al constructor de FighterSprite2D
+	super._ready()

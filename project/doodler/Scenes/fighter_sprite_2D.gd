@@ -5,9 +5,9 @@ class_name  FighterSprite2D
 @export var HP : int
 @export var strength : int = 3
 
-@onready var HP_bar : TextureProgressBar = $Control/TextureProgressBar
+@export var abilities : Array[Object_Data] = []
 
-var abilities : Array[Callable] = []
+@onready var HP_bar : TextureProgressBar = $Control/TextureProgressBar
 
 func _ready() -> void:
 	HP = maxHP

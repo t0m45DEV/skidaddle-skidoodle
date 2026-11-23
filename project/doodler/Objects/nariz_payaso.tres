@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Object_Data" load_steps=2 format=3 uid="uid://c4ww61pdy11uh"]
+
+[ext_resource type="Script" uid="uid://1b3b510wll5g" path="res://Scenes/objects_data.gd" id="1_bldyn"]
+
+[resource]
+script = ExtResource("1_bldyn")
+name = "Nariz de Payaso"
+type = 1
+action = &"object_nariz_payaso"
+metadata/_custom_type_script = "uid://1b3b510wll5g"
