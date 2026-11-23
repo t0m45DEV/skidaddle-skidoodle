@@ -1,9 +1,11 @@
-[gd_resource type="Resource" script_class="Object_Data" load_steps=2 format=3 uid="uid://bqhvmd6c1ehr0"]
+[gd_resource type="Resource" script_class="Object_Data" load_steps=3 format=3 uid="uid://bqhvmd6c1ehr0"]
 
-[ext_resource type="Script" uid="uid://1b3b510wll5g" path="res://Scenes/objects_data.gd" id="1_5auof"]
+[ext_resource type="Script" uid="uid://1b3b510wll5g" path="res://Resources/objects_data.gd" id="1_t7cmo"]
+[ext_resource type="Texture2D" uid="uid://ncclsfgpdlqk" path="res://Sprites/baloon.png" id="2_raryn"]
 
 [resource]
-script = ExtResource("1_5auof")
+script = ExtResource("1_t7cmo")
 name = "Globo"
 action = &"object_globo"
+texture = ExtResource("2_raryn")
 metadata/_custom_type_script = "uid://1b3b510wll5g"

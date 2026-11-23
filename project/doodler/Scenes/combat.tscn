@@ -1,13 +1,10 @@
-[gd_scene load_steps=14 format=3 uid="uid://bejayr1spl6l6"]
+[gd_scene load_steps=11 format=3 uid="uid://bejayr1spl6l6"]
 
 [ext_resource type="Script" uid="uid://cvgvsgdjtrh2j" path="res://Scenes/combat.gd" id="1_ut0kg"]
 [ext_resource type="PackedScene" uid="uid://dujo0b6y7kel3" path="res://Scenes/player_sprite_2D.tscn" id="2_ut0kg"]
 [ext_resource type="PackedScene" uid="uid://bvra3ochdfu0w" path="res://Scenes/enemy_sprite_2D.tscn" id="2_yt1oa"]
 [ext_resource type="Theme" uid="uid://de5w4yfr8tf5e" path="res://Style.tres" id="3_ubpar"]
 [ext_resource type="PackedScene" uid="uid://b1gh8epl4r2x6" path="res://Scenes/action_button.tscn" id="3_ut0kg"]
-[ext_resource type="Script" uid="uid://1b3b510wll5g" path="res://Scenes/objects_data.gd" id="4_3w34b"]
-[ext_resource type="Resource" uid="uid://c4ww61pdy11uh" path="res://Objects/nariz_payaso.tres" id="5_avwh6"]
-[ext_resource type="Resource" uid="uid://bqhvmd6c1ehr0" path="res://Objects/globo.tres" id="6_avwh6"]
 
 [sub_resource type="Animation" id="Animation_yt1oa"]
 length = 0.001
@@ -196,7 +193,6 @@ position = Vector2(850, 193)
 
 [node name="PlayerSprite2D" parent="." instance=ExtResource("2_ut0kg")]
 position = Vector2(296, 192)
-abilities = Array[ExtResource("4_3w34b")]([ExtResource("6_avwh6"), ExtResource("5_avwh6")])
 
 [node name="UI" type="Control" parent="."]
 custom_minimum_size = Vector2(1152, 648)

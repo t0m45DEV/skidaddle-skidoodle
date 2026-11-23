@@ -17,13 +17,16 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-Objects="*res://Scenes/objects.gd"
+Objects="*res://Globals/objects.gd"
+Inventory="*res://Globals/inventory.gd"
 
 [file_customization]
 
 folder_colors={
 "res://Enemies/": "red",
+"res://Globals/": "teal",
 "res://Menus/": "yellow",
 "res://Objects/": "green",
+"res://Resources/": "pink",
 "res://Scenes/": "blue"
 }

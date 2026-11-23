@@ -1,9 +1,11 @@
-[gd_resource type="Resource" script_class="Object_Data" load_steps=2 format=3 uid="uid://c4ww61pdy11uh"]
+[gd_resource type="Resource" script_class="Object_Data" load_steps=3 format=3 uid="uid://c4ww61pdy11uh"]
 
-[ext_resource type="Script" uid="uid://1b3b510wll5g" path="res://Scenes/objects_data.gd" id="1_bldyn"]
+[ext_resource type="Script" uid="uid://1b3b510wll5g" path="res://Resources/objects_data.gd" id="1_r78u0"]
+[ext_resource type="Texture2D" uid="uid://boxnbyynk4154" path="res://icon.svg" id="2_d1cd2"]
 
 [resource]
-script = ExtResource("1_bldyn")
+script = ExtResource("1_r78u0")
 name = "Nariz de Payaso"
 action = &"object_nariz_payaso"
+texture = ExtResource("2_d1cd2")
 metadata/_custom_type_script = "uid://1b3b510wll5g"

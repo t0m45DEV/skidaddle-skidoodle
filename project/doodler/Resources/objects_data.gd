@@ -8,13 +8,15 @@ enum action_type {
 
 @export var name : String
 @export var action : StringName
+@export var texture : Texture2D
 
 var used : bool
 var type : action_type
 
-func _init(_name : String = "Object Name", _action : StringName = &"", _used : bool = false, _type : action_type = action_type.CONSUMIBLE) -> void:
+func _init(_name : String = "Object Name", _action : StringName = &"", _texture : Texture2D = Texture2D.new(), _used : bool = false, _type : action_type = action_type.CONSUMIBLE) -> void:
 	self.name = _name
 	self.action = _action
+	self.texture = _texture
 	self.used = _used
 	self.type = _type
 
