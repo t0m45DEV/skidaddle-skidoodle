@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://4iyyekt3x4h0"]
 
-[ext_resource type="Script" uid="uid://b5kovcjlk3rwp" path="res://Menus/game_over.gd" id="1_ntcrg"]
+[ext_resource type="Script" uid="uid://ulvidakkkeul" path="res://Menus/game_over.gd" id="1_ntcrg"]
 
 [sub_resource type="Gradient" id="Gradient_i0iaq"]
 

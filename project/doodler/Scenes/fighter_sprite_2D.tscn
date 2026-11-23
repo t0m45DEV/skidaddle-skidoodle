@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://epkl0lbi5eky"]
 
-[ext_resource type="Texture2D" uid="uid://boxnbyynk4154" path="res://icon.svg" id="1_jlxxf"]
+[ext_resource type="Texture2D" uid="uid://boxnbyynk4154" path="res://Sprites/icon.svg" id="1_jlxxf"]
 [ext_resource type="Script" uid="uid://dleu3s54p0oo6" path="res://Scenes/fighter_sprite_2D.gd" id="2_5r44q"]
 
 [sub_resource type="Gradient" id="Gradient_jlxxf"]

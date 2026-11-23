@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Enemy_Data" load_steps=6 format=3 uid="uid://crrs4sa4fwemf"]
 
-[ext_resource type="Script" uid="uid://bvylculktule" path="res://Scenes/objects_data.gd" id="1_hjgok"]
-[ext_resource type="Script" uid="uid://c62aygei4t86j" path="res://Scenes/enemy_data.gd" id="1_qtnb1"]
+[ext_resource type="Script" uid="uid://1b3b510wll5g" path="res://Scenes/objects_data.gd" id="1_hjgok"]
+[ext_resource type="Script" uid="uid://b6si3q6ywg50d" path="res://Scenes/enemy_data.gd" id="1_qtnb1"]
 [ext_resource type="Resource" uid="uid://bqhvmd6c1ehr0" path="res://Objects/globo.tres" id="2_vo7mq"]
 [ext_resource type="Resource" uid="uid://liia7t6vqlwv" path="res://Objects/ataque_normal.tres" id="3_vo7mq"]
 [ext_resource type="Resource" uid="uid://c4ww61pdy11uh" path="res://Objects/nariz_payaso.tres" id="4_jwmnn"]
