@@ -5,6 +5,5 @@
 [resource]
 script = ExtResource("1_5auof")
 name = "Globo"
-description = "El unico objeto punzante o contundente que pudiste encontrar. Tu ataque aumenta."
 action = &"object_globo"
 metadata/_custom_type_script = "uid://1b3b510wll5g"
