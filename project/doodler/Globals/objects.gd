@@ -1,5 +1,14 @@
 extends Node
 
+func get_all_objects() -> Array[Object_Data]:
+	var ret : Array[Object_Data] = []
+	
+	for file in DirAccess.get_files_at("res://Objects"):
+		if file != "ataque_normal.tres" and file != "cura_normal.tres":
+			ret.append(ResourceLoader.load("res://Objects/" + file))
+	
+	return ret
+
 func object_ataque_normal(_source : FighterSprite2D, _target : FighterSprite2D) -> String:
 	_source.attack(_target)
 	

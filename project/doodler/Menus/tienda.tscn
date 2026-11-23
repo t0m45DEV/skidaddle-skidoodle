@@ -88,15 +88,15 @@ size_flags_horizontal = 4
 
 [node name="Button" type="Button" parent="VBoxContainer2/HBoxContainer"]
 layout_mode = 2
-theme_override_constants/icon_max_width = 100
+theme = ExtResource("2_e028t")
 
 [node name="Button2" type="Button" parent="VBoxContainer2/HBoxContainer"]
 layout_mode = 2
-theme_override_constants/icon_max_width = 100
+theme = ExtResource("2_e028t")
 
 [node name="Button3" type="Button" parent="VBoxContainer2/HBoxContainer"]
 layout_mode = 2
-theme_override_constants/icon_max_width = 100
+theme = ExtResource("2_e028t")
 
 [node name="Label2" type="Label" parent="VBoxContainer2"]
 layout_mode = 2
@@ -110,10 +110,10 @@ size_flags_horizontal = 4
 
 [node name="Button" type="Button" parent="VBoxContainer2/HBoxContainer2"]
 layout_mode = 2
-theme_override_constants/icon_max_width = 100
+theme = ExtResource("2_e028t")
 
 [node name="Button2" type="Button" parent="VBoxContainer2/HBoxContainer2"]
 layout_mode = 2
-theme_override_constants/icon_max_width = 100
+theme = ExtResource("2_e028t")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

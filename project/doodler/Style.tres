@@ -1,6 +1,7 @@
 [gd_resource type="Theme" format=3 uid="uid://de5w4yfr8tf5e"]
 
 [resource]
+Button/constants/icon_max_width = 100
 Button/font_sizes/font_size = 36
 HBoxContainer/constants/separation = 50
 Label/colors/font_color = Color(0, 0, 0, 1)

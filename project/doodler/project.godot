@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Doodler"
-run/main_scene="uid://bejayr1spl6l6"
+run/main_scene="uid://c1yktex4tuyb0"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
