@@ -71,3 +71,13 @@ func _on_animation_player_animation_finished(_anim_name: StringName) -> void:
 		special2_button.disabled = false
 	
 	is_player_turn = not is_player_turn
+
+
+func _on_enemy_died() -> void:
+	print("malo died")
+	pass # Replace with function body.
+
+
+func _on_player_died() -> void:
+	print("player died")
+	pass # Replace with function body.
