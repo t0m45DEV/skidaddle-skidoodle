@@ -23,3 +23,7 @@ func _ready() -> void:
 	
 	# Vuelvo a llamar al constructor de FighterSprite2D
 	super._ready()
+
+# TODO: Mejor IA de malito
+func do_action(player : PlayerSprite2D) -> String:
+	return self.abilities.pick_random().execute(self, player)

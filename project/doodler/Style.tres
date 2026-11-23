@@ -7,4 +7,5 @@ MarginContainer/constants/margin_bottom = 40
 MarginContainer/constants/margin_left = 20
 MarginContainer/constants/margin_right = 20
 MarginContainer/constants/margin_top = 20
+RichTextLabel/font_sizes/normal_font_size = 24
 VBoxContainer/constants/separation = 20

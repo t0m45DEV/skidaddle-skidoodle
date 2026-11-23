@@ -5,6 +5,7 @@
 [resource]
 script = ExtResource("1_bldyn")
 name = "Nariz de Payaso"
+description = "Te ves tan ridículo al usarlo que tu rival no puede hacer fuerza. Su ataque baja."
 type = 1
 action = &"object_nariz_payaso"
 metadata/_custom_type_script = "uid://1b3b510wll5g"

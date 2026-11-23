@@ -1,10 +1,50 @@
-[gd_scene load_steps=6 format=3 uid="uid://bejayr1spl6l6"]
+[gd_scene load_steps=12 format=3 uid="uid://bejayr1spl6l6"]
 
 [ext_resource type="Script" uid="uid://cvgvsgdjtrh2j" path="res://Scenes/combat.gd" id="1_ut0kg"]
 [ext_resource type="PackedScene" uid="uid://dujo0b6y7kel3" path="res://Scenes/player_sprite_2D.tscn" id="2_ut0kg"]
 [ext_resource type="PackedScene" uid="uid://bvra3ochdfu0w" path="res://Scenes/enemy_sprite_2D.tscn" id="2_yt1oa"]
 [ext_resource type="Theme" uid="uid://de5w4yfr8tf5e" path="res://Style.tres" id="3_ubpar"]
 [ext_resource type="PackedScene" uid="uid://b1gh8epl4r2x6" path="res://Scenes/action_button.tscn" id="3_ut0kg"]
+[ext_resource type="Script" uid="uid://1b3b510wll5g" path="res://Scenes/objects_data.gd" id="4_3w34b"]
+[ext_resource type="Resource" uid="uid://c4ww61pdy11uh" path="res://Objects/nariz_payaso.tres" id="5_avwh6"]
+[ext_resource type="Resource" uid="uid://bqhvmd6c1ehr0" path="res://Objects/globo.tres" id="6_avwh6"]
+
+[sub_resource type="Animation" id="Animation_yt1oa"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("UI/CurrentEffectDescription:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_ut0kg"]
+resource_name = "effect"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("UI/CurrentEffectDescription:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2.0333333, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 1.0, 1.0, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_yt1oa"]
+_data = {
+&"RESET": SubResource("Animation_yt1oa"),
+&"effect": SubResource("Animation_ut0kg")
+}
 
 [node name="Combat" type="Node2D"]
 script = ExtResource("1_ut0kg")
@@ -14,15 +54,16 @@ position = Vector2(850, 193)
 
 [node name="PlayerSprite2D" parent="." instance=ExtResource("2_ut0kg")]
 position = Vector2(296, 192)
+abilities = Array[ExtResource("4_3w34b")]([ExtResource("6_avwh6"), ExtResource("5_avwh6")])
 
-[node name="Buttons2" type="Control" parent="."]
+[node name="UI" type="Control" parent="."]
 custom_minimum_size = Vector2(1152, 648)
 layout_mode = 3
 anchors_preset = 0
 offset_right = 1152.0
 offset_bottom = 648.0
 
-[node name="MarginContainer" type="MarginContainer" parent="Buttons2"]
+[node name="MarginContainer" type="MarginContainer" parent="UI"]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -36,35 +77,62 @@ grow_horizontal = 2
 grow_vertical = 0
 theme = ExtResource("3_ubpar")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Buttons2/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/MarginContainer"]
 layout_mode = 2
 theme = ExtResource("3_ubpar")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Buttons2/MarginContainer/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("3_ubpar")
 
-[node name="ButtonAttack" parent="Buttons2/MarginContainer/VBoxContainer/HBoxContainer" instance=ExtResource("3_ut0kg")]
+[node name="ButtonAttack" parent="UI/MarginContainer/VBoxContainer/HBoxContainer" instance=ExtResource("3_ut0kg")]
 layout_mode = 2
 theme = ExtResource("3_ubpar")
 
-[node name="ButtonHeal" parent="Buttons2/MarginContainer/VBoxContainer/HBoxContainer" instance=ExtResource("3_ut0kg")]
+[node name="ButtonHeal" parent="UI/MarginContainer/VBoxContainer/HBoxContainer" instance=ExtResource("3_ut0kg")]
 layout_mode = 2
 theme = ExtResource("3_ubpar")
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="Buttons2/MarginContainer/VBoxContainer"]
+[node name="HBoxContainer2" type="HBoxContainer" parent="UI/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("3_ubpar")
 
-[node name="ButtonSpecial1" parent="Buttons2/MarginContainer/VBoxContainer/HBoxContainer2" instance=ExtResource("3_ut0kg")]
+[node name="ButtonSpecial1" parent="UI/MarginContainer/VBoxContainer/HBoxContainer2" instance=ExtResource("3_ut0kg")]
 layout_mode = 2
 theme = ExtResource("3_ubpar")
 
-[node name="ButtonSpecial2" parent="Buttons2/MarginContainer/VBoxContainer/HBoxContainer2" instance=ExtResource("3_ut0kg")]
+[node name="ButtonSpecial2" parent="UI/MarginContainer/VBoxContainer/HBoxContainer2" instance=ExtResource("3_ut0kg")]
 layout_mode = 2
 theme = ExtResource("3_ubpar")
 
-[connection signal="pressed" from="Buttons2/MarginContainer/VBoxContainer/HBoxContainer/ButtonAttack" to="." method="_on_button_attack_pressed"]
-[connection signal="pressed" from="Buttons2/MarginContainer/VBoxContainer/HBoxContainer/ButtonHeal" to="." method="_on_button_heal_pressed"]
-[connection signal="pressed" from="Buttons2/MarginContainer/VBoxContainer/HBoxContainer2/ButtonSpecial1" to="." method="_on_button_special1_pressed"]
-[connection signal="pressed" from="Buttons2/MarginContainer/VBoxContainer/HBoxContainer2/ButtonSpecial2" to="." method="_on_button_special2_pressed"]
+[node name="CurrentEffectDescription" type="RichTextLabel" parent="UI"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.312
+anchor_top = 0.44400004
+anchor_right = 0.68700004
+anchor_bottom = 0.66700006
+offset_left = 0.57598877
+offset_top = 0.28796387
+offset_right = 0.57592773
+offset_bottom = -0.21603394
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_ubpar")
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_yt1oa")
+}
+
+[connection signal="pressed" from="UI/MarginContainer/VBoxContainer/HBoxContainer/ButtonAttack" to="." method="_on_button_attack_pressed"]
+[connection signal="pressed" from="UI/MarginContainer/VBoxContainer/HBoxContainer/ButtonHeal" to="." method="_on_button_heal_pressed"]
+[connection signal="pressed" from="UI/MarginContainer/VBoxContainer/HBoxContainer2/ButtonSpecial1" to="." method="_on_button_special1_pressed"]
+[connection signal="pressed" from="UI/MarginContainer/VBoxContainer/HBoxContainer2/ButtonSpecial2" to="." method="_on_button_special2_pressed"]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
+[connection signal="animation_started" from="AnimationPlayer" to="." method="_on_animation_player_animation_started"]

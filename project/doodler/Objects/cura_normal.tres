@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Object_Data" load_steps=2 format=3 uid="uid://bo2sj8we75bym"]
+
+[ext_resource type="Script" uid="uid://1b3b510wll5g" path="res://Scenes/objects_data.gd" id="1_5siub"]
+
+[resource]
+script = ExtResource("1_5siub")
+name = "Cura"
+action = &"object_cura_normal"
+metadata/_custom_type_script = "uid://1b3b510wll5g"

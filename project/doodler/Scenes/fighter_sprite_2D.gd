@@ -4,6 +4,7 @@ class_name  FighterSprite2D
 @export var maxHP : int = 16
 @export var HP : int
 @export var strength : int = 3
+@export var heal_ammount : int = 10
 
 @export var abilities : Array[Object_Data] = []
 
@@ -22,8 +23,8 @@ func damage(dmg : int):
 func attack(target : FighterSprite2D) -> void:
 	target.damage(strength)
 
-func heal(target : FighterSprite2D, heal_amt) -> void:
-	target.damage(-heal_amt)
+func heal() -> void:
+	self.damage(-heal_ammount)
 
 func update_HP_bar() -> void:
 	HP_bar.value = HP

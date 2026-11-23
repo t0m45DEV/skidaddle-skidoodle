@@ -3,10 +3,20 @@ extends Node2D
 @onready var player : PlayerSprite2D = $PlayerSprite2D
 @onready var enemy : EnemySprite2D = $EnemySprite2D
 
-@onready var attack_button   : action_button = $Buttons2/MarginContainer/VBoxContainer/HBoxContainer/ButtonAttack
-@onready var heal_button     : action_button = $Buttons2/MarginContainer/VBoxContainer/HBoxContainer/ButtonHeal
-@onready var special1_button : action_button = $Buttons2/MarginContainer/VBoxContainer/HBoxContainer2/ButtonSpecial1
-@onready var special2_button : action_button = $Buttons2/MarginContainer/VBoxContainer/HBoxContainer2/ButtonSpecial2
+@onready var attack_button   : action_button = $UI/MarginContainer/VBoxContainer/HBoxContainer/ButtonAttack
+@onready var heal_button     : action_button = $UI/MarginContainer/VBoxContainer/HBoxContainer/ButtonHeal
+@onready var special1_button : action_button = $UI/MarginContainer/VBoxContainer/HBoxContainer2/ButtonSpecial1
+@onready var special2_button : action_button = $UI/MarginContainer/VBoxContainer/HBoxContainer2/ButtonSpecial2
+
+@onready var current_effect : RichTextLabel = $UI/CurrentEffectDescription
+@onready var animations : AnimationPlayer = $AnimationPlayer
+
+var is_player_turn : bool = true
+
+func show_effect(effect : String) -> void:
+	current_effect.clear()
+	current_effect.set_text(effect)
+	animations.play("effect")
 
 func _ready() -> void:
 	attack_button.update_state("Attack")
@@ -25,25 +35,34 @@ func _ready() -> void:
 		push_error("El jugador tiene mas de 2 objetos encima.")
 
 func _on_button_attack_pressed() -> void:
-	player.attack(enemy)
+	show_effect(Objects.object_ataque_normal(player, enemy))
 
 func _on_button_heal_pressed() -> void:
-	player.heal(player, 10)
+	show_effect(Objects.object_cura_normal(player, enemy))
 
 func _on_button_special1_pressed() -> void:
-	
-	if player.abilities[0].type == Object_Data.action_type.SELF:
-		player.abilities[0].execute(player)
-	else:
-		player.abilities[0].execute(enemy)
-	
+	show_effect(player.abilities[0].execute(player, enemy))
 	special1_button.visible = false
 
 func _on_button_special2_pressed() -> void:
-	
-	if player.abilities[1].type == Object_Data.action_type.SELF:
-		player.abilities[1].execute(player)
-	else:
-		player.abilities[1].execute(enemy)
-	
+	show_effect(player.abilities[1].execute(player, enemy))
 	special2_button.visible = false
+
+func _on_animation_player_animation_started(_anim_name: StringName) -> void:
+	attack_button.disabled = true
+	heal_button.disabled = true
+	special1_button.disabled = true
+	special2_button.disabled = true
+
+func _on_animation_player_animation_finished(_anim_name: StringName) -> void:
+	current_effect.clear()
+	
+	if is_player_turn:
+		show_effect(enemy.do_action(player))
+	else:
+		attack_button.disabled = false
+		heal_button.disabled = false
+		special1_button.disabled = false
+		special2_button.disabled = false
+	
+	is_player_turn = not is_player_turn
