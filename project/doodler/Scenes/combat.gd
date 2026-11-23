@@ -26,8 +26,8 @@ func disable_buttons() -> void:
 	special2_button.disabled = true
 
 func _ready() -> void:
-	attack_button.update_state("Attack")
-	heal_button.update_state("Heal")
+	attack_button.update_state("Ataque")
+	heal_button.update_state("Cura")
 	
 	if player.abilities.size() == 0:
 		special1_button.visible = false
