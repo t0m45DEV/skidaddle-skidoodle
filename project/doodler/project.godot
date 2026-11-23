@@ -23,7 +23,7 @@ Objects="*res://Scenes/objects.gd"
 
 folder_colors={
 "res://Enemies/": "red",
+"res://Menus/": "yellow",
 "res://Objects/": "green",
-"res://Scenes/": "blue",
-"res://Temp/": "yellow"
+"res://Scenes/": "blue"
 }

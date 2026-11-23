@@ -1,6 +1,8 @@
 extends Sprite2D
 class_name  FighterSprite2D
 
+signal died
+
 @export var maxHP : int = 16
 @export var HP : int
 @export var strength : int = 3
@@ -19,6 +21,8 @@ func _ready() -> void:
 func damage(dmg : int):
 	HP = min(max(0, HP-dmg), maxHP)
 	update_HP_bar()
+	if HP==0:
+		died.emit()
 
 func attack(target : FighterSprite2D) -> void:
 	target.damage(strength)

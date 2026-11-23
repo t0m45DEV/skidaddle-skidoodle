@@ -1,0 +1,64 @@
+[gd_scene load_steps=4 format=3 uid="uid://4iyyekt3x4h0"]
+
+[ext_resource type="Script" uid="uid://b5kovcjlk3rwp" path="res://Menus/game_over.gd" id="1_ntcrg"]
+
+[sub_resource type="Gradient" id="Gradient_i0iaq"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_tcx34"]
+gradient = SubResource("Gradient_i0iaq")
+
+[node name="Game Over" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ntcrg")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_tcx34")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 76.0
+offset_right = 1076.0
+offset_bottom = 100.0
+
+[node name="Label" type="RichTextLabel" parent="VBoxContainer"]
+custom_minimum_size = Vector2(1000, 100)
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 70
+text = "Fin del juego"
+horizontal_alignment = 1
+
+[node name="Label2" type="RichTextLabel" parent="VBoxContainer"]
+custom_minimum_size = Vector2(1000, 100)
+layout_mode = 2
+text = "Bot"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -4.0
+offset_top = -4.0
+offset_right = 4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Volver al
+menu principal
+"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
