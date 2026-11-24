@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Enemy_Data" load_steps=6 format=3 uid="uid://busmmpwkdj2s6"]
+
+[ext_resource type="Script" uid="uid://1b3b510wll5g" path="res://Resources/objects_data.gd" id="1_bi2eq"]
+[ext_resource type="Script" uid="uid://b6si3q6ywg50d" path="res://Resources/enemy_data.gd" id="2_h66bo"]
+[ext_resource type="Texture2D" uid="uid://bivvrild8qc1n" path="res://Sprites/icon-trex.png" id="2_t8280"]
+[ext_resource type="Texture2D" uid="uid://eji3vbxtjfyq" path="res://Sprites/tag-trex.png" id="4_61tk6"]
+[ext_resource type="Texture2D" uid="uid://b33qgqkfb6cge" path="res://Sprites/enemy-trex.png" id="5_jouve"]
+
+[resource]
+script = ExtResource("2_h66bo")
+max_HP = 20
+strength = 4
+texture = ExtResource("5_jouve")
+tag = ExtResource("4_61tk6")
+icon = ExtResource("2_t8280")
+metadata/_custom_type_script = "uid://b6si3q6ywg50d"

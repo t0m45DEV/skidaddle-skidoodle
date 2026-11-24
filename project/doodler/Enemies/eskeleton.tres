@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="Enemy_Data" load_steps=9 format=3 uid="uid://crrs4sa4fwemf"]
+
+[ext_resource type="Script" uid="uid://1b3b510wll5g" path="res://Resources/objects_data.gd" id="1_mt5ws"]
+[ext_resource type="Resource" uid="uid://bqhvmd6c1ehr0" path="res://Objects/globo.tres" id="2_jrdnj"]
+[ext_resource type="Resource" uid="uid://liia7t6vqlwv" path="res://Objects/ataque_normal.tres" id="3_la41c"]
+[ext_resource type="Resource" uid="uid://c4ww61pdy11uh" path="res://Objects/nariz_payaso.tres" id="4_sbca8"]
+[ext_resource type="Texture2D" uid="uid://dbdvfs7sud242" path="res://Sprites/icon-eskeleton.png" id="5_dxtci"]
+[ext_resource type="Script" uid="uid://b6si3q6ywg50d" path="res://Resources/enemy_data.gd" id="6_ywk7g"]
+[ext_resource type="Texture2D" uid="uid://b3t7tletpseb7" path="res://Sprites/tag-eskeleton.png" id="7_juluw"]
+[ext_resource type="Texture2D" uid="uid://cj8sl8i7ou0f7" path="res://Sprites/enemy-eskeleton.png" id="8_1xbng"]
+
+[resource]
+script = ExtResource("6_ywk7g")
+max_HP = 10
+strength = 3
+abilities = Array[ExtResource("1_mt5ws")]([ExtResource("2_jrdnj"), ExtResource("3_la41c"), ExtResource("4_sbca8")])
+texture = ExtResource("8_1xbng")
+tag = ExtResource("7_juluw")
+icon = ExtResource("5_dxtci")

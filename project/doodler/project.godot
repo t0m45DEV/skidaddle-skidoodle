@@ -28,5 +28,6 @@ folder_colors={
 "res://Menus/": "yellow",
 "res://Objects/": "green",
 "res://Resources/": "pink",
-"res://Scenes/": "blue"
+"res://Scenes/": "blue",
+"res://Sprites/": "orange"
 }

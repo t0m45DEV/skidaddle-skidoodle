@@ -3,7 +3,7 @@ class_name EnemySprite2D
 
 # Tiene que ser el MISMO NOMBRE que el archivo 'monstruo.tres' en la carpeta 'Enemies'
 const enemies : Array[String] = [
-	"skeleton",
+	"eskeleton",
 	"dinosaur"
 ]
 
