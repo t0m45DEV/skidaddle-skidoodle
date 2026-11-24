@@ -1,8 +1,19 @@
-[gd_resource type="Resource" script_class="Enemy_Data" load_steps=3 format=3 uid="uid://cgxs2oc780ohq"]
+[gd_resource type="Resource" script_class="Enemy_Data" load_steps=8 format=3 uid="uid://cgxs2oc780ohq"]
 
 [ext_resource type="Script" uid="uid://1b3b510wll5g" path="res://Resources/objects_data.gd" id="1_esnps"]
 [ext_resource type="Script" uid="uid://b6si3q6ywg50d" path="res://Resources/enemy_data.gd" id="2_rturj"]
+[ext_resource type="Resource" uid="uid://liia7t6vqlwv" path="res://Objects/ataque_normal.tres" id="2_ryqgr"]
+[ext_resource type="Resource" uid="uid://c4ww61pdy11uh" path="res://Objects/nariz_payaso.tres" id="3_xv2vi"]
+[ext_resource type="Texture2D" uid="uid://c4g3cexipv4on" path="res://Sprites/icon-aranha.png" id="4_38il2"]
+[ext_resource type="Texture2D" uid="uid://cv8rq6sx7g440" path="res://Sprites/tag-aranha.png" id="6_cy0nh"]
+[ext_resource type="Texture2D" uid="uid://dyqy376cc1gpo" path="res://Sprites/enemy-aranha.png" id="7_rm4mp"]
 
 [resource]
 script = ExtResource("2_rturj")
+max_HP = 16
+strength = 2
+abilities = Array[ExtResource("1_esnps")]([ExtResource("2_ryqgr"), ExtResource("3_xv2vi"), ExtResource("2_ryqgr")])
+texture = ExtResource("7_rm4mp")
+tag = ExtResource("6_cy0nh")
+icon = ExtResource("4_38il2")
 metadata/_custom_type_script = "uid://b6si3q6ywg50d"

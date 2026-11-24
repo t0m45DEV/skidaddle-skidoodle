@@ -20,6 +20,11 @@ config/icon="res://icon.svg"
 Objects="*res://Globals/objects.gd"
 Inventory="*res://Globals/inventory.gd"
 
+[display]
+
+window/stretch/mode="viewport"
+window/stretch/aspect="expand"
+
 [file_customization]
 
 folder_colors={
