@@ -1,8 +1,16 @@
-[gd_resource type="Resource" script_class="Enemy_Data" load_steps=3 format=3 uid="uid://b05eb7j8nws1v"]
+[gd_resource type="Resource" script_class="Enemy_Data" load_steps=6 format=3 uid="uid://b05eb7j8nws1v"]
 
 [ext_resource type="Script" uid="uid://1b3b510wll5g" path="res://Resources/objects_data.gd" id="1_7h7tw"]
 [ext_resource type="Script" uid="uid://b6si3q6ywg50d" path="res://Resources/enemy_data.gd" id="2_46rvb"]
+[ext_resource type="Texture2D" uid="uid://dnk5jpxxomnq6" path="res://Sprites/icon-boblin.png" id="2_qi7mt"]
+[ext_resource type="Texture2D" uid="uid://dg4sgksyfx5us" path="res://Sprites/tag-boblin.png" id="4_ng28h"]
+[ext_resource type="Texture2D" uid="uid://btkst6p74copf" path="res://Sprites/enemy-boblin.png" id="5_hywyo"]
 
 [resource]
 script = ExtResource("2_46rvb")
+max_HP = 12
+strength = 6
+texture = ExtResource("5_hywyo")
+tag = ExtResource("4_ng28h")
+icon = ExtResource("2_qi7mt")
 metadata/_custom_type_script = "uid://b6si3q6ywg50d"

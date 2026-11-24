@@ -1,8 +1,14 @@
-[gd_resource type="Resource" script_class="Enemy_Data" load_steps=3 format=3 uid="uid://ds12v0jwg8ivs"]
+[gd_resource type="Resource" script_class="Enemy_Data" load_steps=6 format=3 uid="uid://ds12v0jwg8ivs"]
 
 [ext_resource type="Script" uid="uid://1b3b510wll5g" path="res://Resources/objects_data.gd" id="1_5uqug"]
 [ext_resource type="Script" uid="uid://b6si3q6ywg50d" path="res://Resources/enemy_data.gd" id="2_k8rwi"]
+[ext_resource type="Texture2D" uid="uid://45rg5p3s11xy" path="res://Sprites/icon-cofre.png" id="2_rgrl8"]
+[ext_resource type="Texture2D" uid="uid://cswdfdwlu3pnq" path="res://Sprites/tag-cofre.png" id="4_l5olb"]
+[ext_resource type="Texture2D" uid="uid://cbyw2ur2bs6mm" path="res://Sprites/enemy-cofre.png" id="5_f5sue"]
 
 [resource]
 script = ExtResource("2_k8rwi")
+texture = ExtResource("5_f5sue")
+tag = ExtResource("4_l5olb")
+icon = ExtResource("2_rgrl8")
 metadata/_custom_type_script = "uid://b6si3q6ywg50d"

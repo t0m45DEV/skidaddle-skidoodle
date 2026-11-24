@@ -4,7 +4,12 @@ class_name EnemySprite2D
 # Tiene que ser el MISMO NOMBRE que el archivo 'monstruo.tres' en la carpeta 'Enemies'
 const enemies : Array[String] = [
 	"eskeleton",
-	"dinosaur"
+	"trex",
+	"67",
+	"acuaman",
+	"aranha",
+	"biltm"
+	
 ]
 
 @export var enemy : String = enemies[0] # Por defecto se autoasigna el primer enemigo

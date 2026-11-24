@@ -1,8 +1,16 @@
-[gd_resource type="Resource" script_class="Enemy_Data" load_steps=3 format=3 uid="uid://63c4gkqur1bw"]
+[gd_resource type="Resource" script_class="Enemy_Data" load_steps=6 format=3 uid="uid://63c4gkqur1bw"]
 
 [ext_resource type="Script" uid="uid://1b3b510wll5g" path="res://Resources/objects_data.gd" id="1_4bhin"]
 [ext_resource type="Script" uid="uid://b6si3q6ywg50d" path="res://Resources/enemy_data.gd" id="2_7h3l4"]
+[ext_resource type="Texture2D" uid="uid://bnrugravwdtfo" path="res://Sprites/icon-biltm.png" id="2_iydom"]
+[ext_resource type="Texture2D" uid="uid://dyl7ib8v5oreb" path="res://Sprites/tag-biltm.png" id="4_86ny3"]
+[ext_resource type="Texture2D" uid="uid://gd2yobdywcq5" path="res://Sprites/enemy-biltm.png" id="5_r1icy"]
 
 [resource]
 script = ExtResource("2_7h3l4")
+max_HP = 13
+strength = 3
+texture = ExtResource("5_r1icy")
+tag = ExtResource("4_86ny3")
+icon = ExtResource("2_iydom")
 metadata/_custom_type_script = "uid://b6si3q6ywg50d"

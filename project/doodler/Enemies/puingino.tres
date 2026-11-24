@@ -1,8 +1,14 @@
-[gd_resource type="Resource" script_class="Enemy_Data" load_steps=3 format=3 uid="uid://by4vidmml1c3r"]
+[gd_resource type="Resource" script_class="Enemy_Data" load_steps=6 format=3 uid="uid://by4vidmml1c3r"]
 
 [ext_resource type="Script" uid="uid://1b3b510wll5g" path="res://Resources/objects_data.gd" id="1_nx4k8"]
+[ext_resource type="Texture2D" uid="uid://cjoli2imwd8ed" path="res://Sprites/icon-puingino.png" id="2_3cgo3"]
 [ext_resource type="Script" uid="uid://b6si3q6ywg50d" path="res://Resources/enemy_data.gd" id="2_4ar70"]
+[ext_resource type="Texture2D" uid="uid://d3e5864bnejla" path="res://Sprites/tag-puingino.png" id="4_sbsax"]
+[ext_resource type="Texture2D" uid="uid://coi530lpm10cv" path="res://Sprites/enemy-puingino.png" id="5_xd7ij"]
 
 [resource]
 script = ExtResource("2_4ar70")
+texture = ExtResource("5_xd7ij")
+tag = ExtResource("4_sbsax")
+icon = ExtResource("2_3cgo3")
 metadata/_custom_type_script = "uid://b6si3q6ywg50d"

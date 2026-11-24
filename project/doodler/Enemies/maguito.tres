@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Enemy_Data" load_steps=6 format=3 uid="uid://dlxe886a33mbi"]
+
+[ext_resource type="Script" uid="uid://1b3b510wll5g" path="res://Resources/objects_data.gd" id="1_sgmgp"]
+[ext_resource type="Texture2D" uid="uid://4ysi7she4r4l" path="res://Sprites/icon-maguito.png" id="2_ca44k"]
+[ext_resource type="Script" uid="uid://b6si3q6ywg50d" path="res://Resources/enemy_data.gd" id="2_etu8p"]
+[ext_resource type="Texture2D" uid="uid://cm86bo6dgt277" path="res://Sprites/tag-maguito.png" id="4_ca44k"]
+[ext_resource type="Texture2D" uid="uid://c4be1s5wddod0" path="res://Sprites/enemy-maguito.png" id="5_3bbcd"]
+
+[resource]
+script = ExtResource("2_etu8p")
+texture = ExtResource("5_3bbcd")
+tag = ExtResource("4_ca44k")
+icon = ExtResource("2_ca44k")
+metadata/_custom_type_script = "uid://b6si3q6ywg50d"

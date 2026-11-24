@@ -1,8 +1,14 @@
-[gd_resource type="Resource" script_class="Enemy_Data" load_steps=3 format=3 uid="uid://dxg8ac3b3srql"]
+[gd_resource type="Resource" script_class="Enemy_Data" load_steps=6 format=3 uid="uid://dxg8ac3b3srql"]
 
 [ext_resource type="Script" uid="uid://1b3b510wll5g" path="res://Resources/objects_data.gd" id="1_slewx"]
 [ext_resource type="Script" uid="uid://b6si3q6ywg50d" path="res://Resources/enemy_data.gd" id="2_64tqv"]
+[ext_resource type="Texture2D" uid="uid://bbet54ky6kgx6" path="res://Sprites/icon-mimic.png" id="2_sfoi3"]
+[ext_resource type="Texture2D" uid="uid://j06s8uv6dorj" path="res://Sprites/tag-mimic.png" id="4_8j5ik"]
+[ext_resource type="Texture2D" uid="uid://nmsvjkvqhl7g" path="res://Sprites/enemy-mimic.png" id="5_43owk"]
 
 [resource]
 script = ExtResource("2_64tqv")
+texture = ExtResource("5_43owk")
+tag = ExtResource("4_8j5ik")
+icon = ExtResource("2_sfoi3")
 metadata/_custom_type_script = "uid://b6si3q6ywg50d"

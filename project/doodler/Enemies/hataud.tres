@@ -1,8 +1,14 @@
-[gd_resource type="Resource" script_class="Enemy_Data" load_steps=3 format=3 uid="uid://bfd1yeb8nabkj"]
+[gd_resource type="Resource" script_class="Enemy_Data" load_steps=6 format=3 uid="uid://bfd1yeb8nabkj"]
 
 [ext_resource type="Script" uid="uid://1b3b510wll5g" path="res://Resources/objects_data.gd" id="1_mu0dn"]
 [ext_resource type="Script" uid="uid://b6si3q6ywg50d" path="res://Resources/enemy_data.gd" id="2_214po"]
+[ext_resource type="Texture2D" uid="uid://bni1nopf4navw" path="res://Sprites/icon-hataud.png" id="2_e75os"]
+[ext_resource type="Texture2D" uid="uid://jgfn2v2g6x62" path="res://Sprites/tag-hataud.png" id="4_l2f8k"]
+[ext_resource type="Texture2D" uid="uid://dotu51w4agvds" path="res://Sprites/enemy-hataud.png" id="5_1ctyv"]
 
 [resource]
 script = ExtResource("2_214po")
+texture = ExtResource("5_1ctyv")
+tag = ExtResource("4_l2f8k")
+icon = ExtResource("2_e75os")
 metadata/_custom_type_script = "uid://b6si3q6ywg50d"
