@@ -1,15 +1,18 @@
-[gd_resource type="Resource" script_class="Enemy_Data" load_steps=6 format=3 uid="uid://c5ep451xrlq8y"]
+[gd_resource type="Resource" script_class="Enemy_Data" load_steps=8 format=3 uid="uid://c5ep451xrlq8y"]
 
 [ext_resource type="Script" uid="uid://1b3b510wll5g" path="res://Resources/objects_data.gd" id="1_o4okc"]
+[ext_resource type="Resource" uid="uid://liia7t6vqlwv" path="res://Objects/ataque_normal.tres" id="2_78ffo"]
 [ext_resource type="Texture2D" uid="uid://cb1221mktpl56" path="res://Sprites/icon-acuaman.png" id="2_ljwgo"]
 [ext_resource type="Script" uid="uid://b6si3q6ywg50d" path="res://Resources/enemy_data.gd" id="2_ruxcw"]
+[ext_resource type="Resource" uid="uid://bo2sj8we75bym" path="res://Objects/cura_normal.tres" id="3_a6egx"]
 [ext_resource type="Texture2D" uid="uid://dhtc1qu5a5nqg" path="res://Sprites/tag-acuaman.png" id="4_0dsjc"]
 [ext_resource type="Texture2D" uid="uid://3ietl7eovngp" path="res://Sprites/enemy-acuaman.png" id="5_78ffo"]
 
 [resource]
 script = ExtResource("2_ruxcw")
 max_HP = 20
-strength = 2
+strength = 4
+abilities = Array[ExtResource("1_o4okc")]([ExtResource("2_78ffo"), ExtResource("3_a6egx")])
 texture = ExtResource("5_78ffo")
 tag = ExtResource("4_0dsjc")
 icon = ExtResource("2_ljwgo")

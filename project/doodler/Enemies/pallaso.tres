@@ -1,13 +1,18 @@
-[gd_resource type="Resource" script_class="Enemy_Data" load_steps=6 format=3 uid="uid://bqiq0w2rtpx77"]
+[gd_resource type="Resource" script_class="Enemy_Data" load_steps=8 format=3 uid="uid://bqiq0w2rtpx77"]
 
 [ext_resource type="Script" uid="uid://1b3b510wll5g" path="res://Resources/objects_data.gd" id="1_5nbay"]
 [ext_resource type="Script" uid="uid://b6si3q6ywg50d" path="res://Resources/enemy_data.gd" id="2_38yfc"]
+[ext_resource type="Resource" uid="uid://liia7t6vqlwv" path="res://Objects/ataque_normal.tres" id="2_lf5i8"]
 [ext_resource type="Texture2D" uid="uid://bfj50vm3ctn4l" path="res://Sprites/icon-pallaso.png" id="2_tiupw"]
+[ext_resource type="Resource" uid="uid://bo2sj8we75bym" path="res://Objects/cura_normal.tres" id="3_deetf"]
 [ext_resource type="Texture2D" uid="uid://djj7vixm1drby" path="res://Sprites/tag-pallaso.png" id="4_1sd6e"]
 [ext_resource type="Texture2D" uid="uid://blc3icr6rie2" path="res://Sprites/enemy-pallaso.png" id="5_lf5i8"]
 
 [resource]
 script = ExtResource("2_38yfc")
+max_HP = 13
+strength = 7
+abilities = Array[ExtResource("1_5nbay")]([ExtResource("2_lf5i8"), ExtResource("3_deetf")])
 texture = ExtResource("5_lf5i8")
 tag = ExtResource("4_1sd6e")
 icon = ExtResource("2_tiupw")

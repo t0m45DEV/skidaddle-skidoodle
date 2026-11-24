@@ -1,9 +1,7 @@
 extends FighterSprite2D
 class_name EnemySprite2D
 
-# Tiene que ser el MISMO NOMBRE que el archivo 'monstruo.tres' en la carpeta 'Enemies'
-const enemies : Array[String] = [
-	"aranha",
+@export_enum("aranha",
 	"boblin",
 	"hataud",
 	"eskeleton",
@@ -20,16 +18,16 @@ const enemies : Array[String] = [
 	"roberto",
 	"67",
 	"labubu",
-	"oy"
-]
-
-@export var enemy : String = enemies[0] # Por defecto se autoasigna el primer enemigo
+	"oy") var enemy : String = "boblin" # Por defecto se autoasigna el primer enemigo
 
 func _ready() -> void:
 	# Si hay alguien a quien cargar, buscamos sus estadisticas
 	if enemy != "":
 		var data : Enemy_Data = ResourceLoader.load("res://Enemies/" + enemy + ".tres")
 		
+		$Control/Icon.set_texture(data.icon)
+		$Tag.set_texture(data.tag)
+		self.set_texture(data.texture)
 		self.maxHP = data.max_HP
 		self.strength = data.strength
 		self.abilities = []

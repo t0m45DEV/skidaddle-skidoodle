@@ -36,10 +36,17 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -128.0
-offset_right = 128.0
-offset_bottom = 40.0
+offset_left = -200.0
+offset_top = 296.0
+offset_right = 50.0
+offset_bottom = 336.0
 grow_horizontal = 2
 nine_patch_stretch = true
 texture_under = SubResource("GradientTexture1D_g655o")
 texture_progress = SubResource("GradientTexture1D_2kgvx")
+
+[node name="Icon" type="Sprite2D" parent="Control"]
+position = Vector2(120, 320)
+
+[node name="Tag" type="Sprite2D" parent="."]
+position = Vector2(0, -200)

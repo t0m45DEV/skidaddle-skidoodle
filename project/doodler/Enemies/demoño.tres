@@ -1,13 +1,18 @@
-[gd_resource type="Resource" script_class="Enemy_Data" load_steps=6 format=3 uid="uid://bxcktss5a15ji"]
+[gd_resource type="Resource" script_class="Enemy_Data" load_steps=8 format=3 uid="uid://bxcktss5a15ji"]
 
 [ext_resource type="Script" uid="uid://1b3b510wll5g" path="res://Resources/objects_data.gd" id="1_0xik7"]
 [ext_resource type="Script" uid="uid://b6si3q6ywg50d" path="res://Resources/enemy_data.gd" id="2_3hehk"]
+[ext_resource type="Resource" uid="uid://liia7t6vqlwv" path="res://Objects/ataque_normal.tres" id="2_hnrv5"]
 [ext_resource type="Texture2D" uid="uid://bs707hc4xfvi2" path="res://Sprites/icon-demoño.png" id="2_prxec"]
+[ext_resource type="Resource" uid="uid://bo2sj8we75bym" path="res://Objects/cura_normal.tres" id="3_55fvd"]
 [ext_resource type="Texture2D" uid="uid://bmbo58dtke3j5" path="res://Sprites/tag-demoño.png" id="4_fmq5b"]
 [ext_resource type="Texture2D" uid="uid://hw74wvsv5ath" path="res://Sprites/enemy-demoño.png" id="5_hnrv5"]
 
 [resource]
 script = ExtResource("2_3hehk")
+max_HP = 6
+strength = 6
+abilities = Array[ExtResource("1_0xik7")]([ExtResource("2_hnrv5"), ExtResource("3_55fvd")])
 texture = ExtResource("5_hnrv5")
 tag = ExtResource("4_fmq5b")
 icon = ExtResource("2_prxec")

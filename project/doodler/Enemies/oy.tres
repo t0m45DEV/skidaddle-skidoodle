@@ -1,13 +1,20 @@
-[gd_resource type="Resource" script_class="Enemy_Data" load_steps=6 format=3 uid="uid://cqfk7sngmi5tm"]
+[gd_resource type="Resource" script_class="Enemy_Data" load_steps=10 format=3 uid="uid://cqfk7sngmi5tm"]
 
 [ext_resource type="Script" uid="uid://1b3b510wll5g" path="res://Resources/objects_data.gd" id="1_naxe6"]
 [ext_resource type="Script" uid="uid://b6si3q6ywg50d" path="res://Resources/enemy_data.gd" id="2_4xogh"]
 [ext_resource type="Texture2D" uid="uid://cebvk60co1bgn" path="res://Sprites/icon-oy.png" id="2_kyqm8"]
+[ext_resource type="Resource" uid="uid://liia7t6vqlwv" path="res://Objects/ataque_normal.tres" id="2_my67t"]
+[ext_resource type="Resource" uid="uid://bo2sj8we75bym" path="res://Objects/cura_normal.tres" id="3_ohvhu"]
+[ext_resource type="Resource" uid="uid://bqhvmd6c1ehr0" path="res://Objects/globo.tres" id="4_cokj7"]
 [ext_resource type="Texture2D" uid="uid://ccrlc7q0mg1rp" path="res://Sprites/tag-oy.png" id="4_wr7v3"]
+[ext_resource type="Resource" uid="uid://c4ww61pdy11uh" path="res://Objects/nariz_payaso.tres" id="5_ctac4"]
 [ext_resource type="Texture2D" uid="uid://bp25poutfhaqk" path="res://Sprites/enemy-oy.png" id="5_pijg8"]
 
 [resource]
 script = ExtResource("2_4xogh")
+max_HP = 40
+strength = 20
+abilities = Array[ExtResource("1_naxe6")]([ExtResource("2_my67t"), ExtResource("3_ohvhu"), ExtResource("4_cokj7"), ExtResource("5_ctac4")])
 texture = ExtResource("5_pijg8")
 tag = ExtResource("4_wr7v3")
 icon = ExtResource("2_kyqm8")

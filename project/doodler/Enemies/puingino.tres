@@ -1,13 +1,18 @@
-[gd_resource type="Resource" script_class="Enemy_Data" load_steps=6 format=3 uid="uid://by4vidmml1c3r"]
+[gd_resource type="Resource" script_class="Enemy_Data" load_steps=8 format=3 uid="uid://by4vidmml1c3r"]
 
 [ext_resource type="Script" uid="uid://1b3b510wll5g" path="res://Resources/objects_data.gd" id="1_nx4k8"]
 [ext_resource type="Texture2D" uid="uid://cjoli2imwd8ed" path="res://Sprites/icon-puingino.png" id="2_3cgo3"]
 [ext_resource type="Script" uid="uid://b6si3q6ywg50d" path="res://Resources/enemy_data.gd" id="2_4ar70"]
+[ext_resource type="Resource" uid="uid://liia7t6vqlwv" path="res://Objects/ataque_normal.tres" id="2_xd7ij"]
+[ext_resource type="Resource" uid="uid://bo2sj8we75bym" path="res://Objects/cura_normal.tres" id="3_5imso"]
 [ext_resource type="Texture2D" uid="uid://d3e5864bnejla" path="res://Sprites/tag-puingino.png" id="4_sbsax"]
 [ext_resource type="Texture2D" uid="uid://coi530lpm10cv" path="res://Sprites/enemy-puingino.png" id="5_xd7ij"]
 
 [resource]
 script = ExtResource("2_4ar70")
+max_HP = 10
+strength = 3
+abilities = Array[ExtResource("1_nx4k8")]([ExtResource("2_xd7ij"), ExtResource("3_5imso")])
 texture = ExtResource("5_xd7ij")
 tag = ExtResource("4_sbsax")
 icon = ExtResource("2_3cgo3")

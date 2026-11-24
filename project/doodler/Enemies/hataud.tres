@@ -8,6 +8,7 @@
 
 [resource]
 script = ExtResource("2_214po")
+max_HP = 15
 texture = ExtResource("5_1ctyv")
 tag = ExtResource("4_l2f8k")
 icon = ExtResource("2_e75os")

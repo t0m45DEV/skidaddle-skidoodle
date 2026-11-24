@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://k0udwwwl58c" path="res://Scenes/button.gd" id="1_k8n73"]
 
 [node name="Button" type="Button"]
-custom_minimum_size = Vector2(300, 50)
+custom_minimum_size = Vector2(200, 50)
 anchors_preset = -1
 anchor_right = 0.26000002
 anchor_bottom = 0.083000004

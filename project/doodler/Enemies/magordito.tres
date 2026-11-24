@@ -1,13 +1,18 @@
-[gd_resource type="Resource" script_class="Enemy_Data" load_steps=6 format=3 uid="uid://dtjdkkx8f6h60"]
+[gd_resource type="Resource" script_class="Enemy_Data" load_steps=8 format=3 uid="uid://dtjdkkx8f6h60"]
 
 [ext_resource type="Script" uid="uid://1b3b510wll5g" path="res://Resources/objects_data.gd" id="1_2j15g"]
 [ext_resource type="Texture2D" uid="uid://4ysi7she4r4l" path="res://Sprites/icon-maguito.png" id="2_touik"]
+[ext_resource type="Resource" uid="uid://liia7t6vqlwv" path="res://Objects/ataque_normal.tres" id="2_vk150"]
+[ext_resource type="Resource" uid="uid://bo2sj8we75bym" path="res://Objects/cura_normal.tres" id="3_e6yse"]
 [ext_resource type="Script" uid="uid://b6si3q6ywg50d" path="res://Resources/enemy_data.gd" id="3_vk150"]
 [ext_resource type="Texture2D" uid="uid://bjmiqt1il68x6" path="res://Sprites/tag-magordito.png" id="4_e6yse"]
 [ext_resource type="Texture2D" uid="uid://413k266l35yw" path="res://Sprites/enemy-magordito.png" id="5_5dx3s"]
 
 [resource]
 script = ExtResource("3_vk150")
+max_HP = 30
+strength = 3
+abilities = Array[ExtResource("1_2j15g")]([ExtResource("2_vk150"), ExtResource("3_e6yse")])
 texture = ExtResource("5_5dx3s")
 tag = ExtResource("4_e6yse")
 icon = ExtResource("2_touik")

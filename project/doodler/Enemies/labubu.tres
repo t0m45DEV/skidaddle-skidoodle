@@ -1,13 +1,18 @@
-[gd_resource type="Resource" script_class="Enemy_Data" load_steps=6 format=3 uid="uid://cw0h3hxt6fnli"]
+[gd_resource type="Resource" script_class="Enemy_Data" load_steps=8 format=3 uid="uid://cw0h3hxt6fnli"]
 
 [ext_resource type="Script" uid="uid://1b3b510wll5g" path="res://Resources/objects_data.gd" id="1_436d2"]
+[ext_resource type="Resource" uid="uid://liia7t6vqlwv" path="res://Objects/ataque_normal.tres" id="2_73xkr"]
 [ext_resource type="Script" uid="uid://b6si3q6ywg50d" path="res://Resources/enemy_data.gd" id="2_sbrxk"]
 [ext_resource type="Texture2D" uid="uid://b23qbgxtqsntm" path="res://Sprites/icon-labubu.png" id="2_v1l0b"]
+[ext_resource type="Resource" uid="uid://bo2sj8we75bym" path="res://Objects/cura_normal.tres" id="3_wjbjg"]
 [ext_resource type="Texture2D" uid="uid://cyp0b2frekc4m" path="res://Sprites/tag-labubu.png" id="4_mtsr0"]
 [ext_resource type="Texture2D" uid="uid://bxfk2rxj6nwn2" path="res://Sprites/enemy-labubu.png" id="5_73xkr"]
 
 [resource]
 script = ExtResource("2_sbrxk")
+max_HP = 20
+strength = 10
+abilities = Array[ExtResource("1_436d2")]([ExtResource("2_73xkr"), ExtResource("3_wjbjg")])
 texture = ExtResource("5_73xkr")
 tag = ExtResource("4_mtsr0")
 icon = ExtResource("2_v1l0b")

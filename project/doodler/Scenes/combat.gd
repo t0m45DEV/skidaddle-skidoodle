@@ -5,8 +5,8 @@ extends Node2D
 
 @onready var attack_button   : action_button = $UI/MarginContainer/VBoxContainer/HBoxContainer/ButtonAttack
 @onready var heal_button     : action_button = $UI/MarginContainer/VBoxContainer/HBoxContainer/ButtonHeal
-@onready var special1_button : action_button = $UI/MarginContainer/VBoxContainer/HBoxContainer2/ButtonSpecial1
-@onready var special2_button : action_button = $UI/MarginContainer/VBoxContainer/HBoxContainer2/ButtonSpecial2
+@onready var special1_button : action_button = $UI/MarginContainer/VBoxContainer/HBoxContainer/ButtonSpecial1
+@onready var special2_button : action_button = $UI/MarginContainer/VBoxContainer/HBoxContainer/ButtonSpecial2
 
 @onready var current_effect : RichTextLabel = $UI/CurrentEffectDescription
 @onready var animations : AnimationPlayer = $AnimationPlayer

@@ -1,7 +1,8 @@
 extends Node
 
 var inventoryArray : Array[Object_Data] = [
-	ResourceLoader.load("res://Objects/globo.tres")
+	ResourceLoader.load("res://Objects/globo.tres"),
+	ResourceLoader.load("res://Objects/nariz_payaso.tres")
 ]
 
 func empty_inventory() -> void:
