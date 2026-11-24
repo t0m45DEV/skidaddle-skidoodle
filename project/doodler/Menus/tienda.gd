@@ -28,6 +28,10 @@ func _on_button_pressed() -> void:
 func _on_shop_button_send_data(data: Object_Data) -> void:
 	if Inventory.inventoryArray.size() < 2:
 		Inventory.inventoryArray.append(data)
+		# Se pasa a la siguiente batalla
+		_on_button_pressed()
+	else:
+		print("No tienes espacio, deshazte de algun objeto antes de tomar otro")
 
 func _on_inventory_button_send_data(data: Object_Data) -> void:
 	Inventory.inventoryArray.erase(data)
