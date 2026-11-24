@@ -11,13 +11,23 @@ func _ready() -> void:
 	
 	for button in shop_options.get_children():
 		var obj : Object_Data = all_objects.pick_random()
-		button.set_button_icon(obj.texture)
-		all_objects.erase(obj)
+		button.update_data(obj)
+		#all_objects.erase(obj)
 	
-	for i in range(Inventory.inventoryArray.size()):
+	for i in range($VBoxContainer2/HBoxContainer2.get_children().size()):
 		var i_button : Button = $VBoxContainer2/HBoxContainer2.get_child(i)
-		var icon : Texture2D = Inventory.inventoryArray[i].texture
-		i_button.set_button_icon(icon)
+		
+		if i < Inventory.inventoryArray.size():
+			i_button.update_data(Inventory.inventoryArray[i])
+		else:
+			i_button.visible = false
 
 func _on_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/combat.tscn")
+
+func _on_shop_button_send_data(data: Object_Data) -> void:
+	if Inventory.inventoryArray.size() < 2:
+		Inventory.inventoryArray.append(data)
+
+func _on_inventory_button_send_data(data: Object_Data) -> void:
+	Inventory.inventoryArray.erase(data)

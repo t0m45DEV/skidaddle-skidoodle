@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://8kobhpnvg82g"]
+
+[ext_resource type="Theme" uid="uid://de5w4yfr8tf5e" path="res://Style.tres" id="1_bfbe4"]
+[ext_resource type="Script" uid="uid://d2my5v0yijaph" path="res://Menus/shop_button.gd" id="2_dkp28"]
+
+[node name="ShopButton" type="Button"]
+theme = ExtResource("1_bfbe4")
+script = ExtResource("2_dkp28")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

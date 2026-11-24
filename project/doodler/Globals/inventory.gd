@@ -1,6 +1,8 @@
 extends Node
 
-var inventoryArray : Array[Object_Data] = []
+var inventoryArray : Array[Object_Data] = [
+	ResourceLoader.load("res://Objects/globo.tres")
+]
 
 func empty_inventory() -> void:
 	inventoryArray = []

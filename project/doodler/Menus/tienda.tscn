@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://dth42a13t3cv3"]
+[gd_scene load_steps=6 format=3 uid="uid://dth42a13t3cv3"]
 
 [ext_resource type="Script" uid="uid://b7upwrk2qhasd" path="res://Menus/tienda.gd" id="1_n81as"]
 [ext_resource type="Theme" uid="uid://de5w4yfr8tf5e" path="res://Style.tres" id="2_e028t"]
+[ext_resource type="PackedScene" uid="uid://8kobhpnvg82g" path="res://Menus/shop_button.tscn" id="3_p0k1f"]
 
 [sub_resource type="Gradient" id="Gradient_e028t"]
 colors = PackedColorArray(0, 1, 0, 1, 0, 1, 1, 1)
@@ -86,17 +87,14 @@ horizontal_alignment = 1
 layout_mode = 2
 size_flags_horizontal = 4
 
-[node name="Button" type="Button" parent="VBoxContainer2/HBoxContainer"]
+[node name="ShopButton" parent="VBoxContainer2/HBoxContainer" instance=ExtResource("3_p0k1f")]
 layout_mode = 2
-theme = ExtResource("2_e028t")
 
-[node name="Button2" type="Button" parent="VBoxContainer2/HBoxContainer"]
+[node name="ShopButton2" parent="VBoxContainer2/HBoxContainer" instance=ExtResource("3_p0k1f")]
 layout_mode = 2
-theme = ExtResource("2_e028t")
 
-[node name="Button3" type="Button" parent="VBoxContainer2/HBoxContainer"]
+[node name="ShopButton3" parent="VBoxContainer2/HBoxContainer" instance=ExtResource("3_p0k1f")]
 layout_mode = 2
-theme = ExtResource("2_e028t")
 
 [node name="Label2" type="Label" parent="VBoxContainer2"]
 layout_mode = 2
@@ -108,12 +106,15 @@ horizontal_alignment = 1
 layout_mode = 2
 size_flags_horizontal = 4
 
-[node name="Button" type="Button" parent="VBoxContainer2/HBoxContainer2"]
+[node name="ShopButton" parent="VBoxContainer2/HBoxContainer2" instance=ExtResource("3_p0k1f")]
 layout_mode = 2
-theme = ExtResource("2_e028t")
 
-[node name="Button2" type="Button" parent="VBoxContainer2/HBoxContainer2"]
+[node name="ShopButton2" parent="VBoxContainer2/HBoxContainer2" instance=ExtResource("3_p0k1f")]
 layout_mode = 2
-theme = ExtResource("2_e028t")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="send_data" from="VBoxContainer2/HBoxContainer/ShopButton" to="." method="_on_shop_button_send_data"]
+[connection signal="send_data" from="VBoxContainer2/HBoxContainer/ShopButton2" to="." method="_on_shop_button_send_data"]
+[connection signal="send_data" from="VBoxContainer2/HBoxContainer/ShopButton3" to="." method="_on_shop_button_send_data"]
+[connection signal="send_data" from="VBoxContainer2/HBoxContainer2/ShopButton" to="." method="_on_inventory_button_send_data"]
+[connection signal="send_data" from="VBoxContainer2/HBoxContainer2/ShopButton2" to="." method="_on_inventory_button_send_data"]
