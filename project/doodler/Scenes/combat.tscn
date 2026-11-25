@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bejayr1spl6l6"]
+[gd_scene load_steps=13 format=3 uid="uid://bejayr1spl6l6"]
 
 [ext_resource type="Script" uid="uid://cvgvsgdjtrh2j" path="res://Scenes/combat.gd" id="1_ut0kg"]
 [ext_resource type="Texture2D" uid="uid://b7t0av3sjxqrq" path="res://Sprites/fight-screen.png" id="2_3w34b"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bvra3ochdfu0w" path="res://Scenes/enemy_sprite_2D.tscn" id="2_yt1oa"]
 [ext_resource type="Theme" uid="uid://de5w4yfr8tf5e" path="res://Style.tres" id="3_ubpar"]
 [ext_resource type="PackedScene" uid="uid://b1gh8epl4r2x6" path="res://Scenes/action_button.tscn" id="3_ut0kg"]
+[ext_resource type="AudioStream" uid="uid://bhtytglyrwrdj" path="res://8bit-loop-74bpm.wav" id="7_3w34b"]
 
 [sub_resource type="Animation" id="Animation_yt1oa"]
 length = 0.001
@@ -249,14 +250,14 @@ theme = ExtResource("3_ubpar")
 [node name="CurrentEffectDescription" type="RichTextLabel" parent="UI"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.27800003
-anchor_top = 0.44400004
-anchor_right = 0.72200006
-anchor_bottom = 0.66700006
-offset_left = -0.25604248
-offset_top = 0.28796387
-offset_right = 0.2559204
-offset_bottom = -0.21603394
+anchor_left = 0.18100001
+anchor_top = 0.66700006
+anchor_right = 0.55600005
+anchor_bottom = 0.83000004
+offset_left = -0.51200867
+offset_top = -4.216034
+offset_right = 0.48791504
+offset_bottom = 0.15997314
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("3_ubpar")
@@ -269,6 +270,10 @@ visible_ratio = 0.0
 libraries = {
 &"": SubResource("AnimationLibrary_yt1oa")
 }
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_3w34b")
+autoplay = true
 
 [connection signal="died" from="EnemySprite2D" to="." method="_on_enemy_died"]
 [connection signal="died" from="PlayerSprite2D" to="." method="_on_player_died"]

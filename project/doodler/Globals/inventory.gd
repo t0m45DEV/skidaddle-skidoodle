@@ -1,5 +1,7 @@
 extends Node
 
+var combat_history : Array[String] = []
+
 var inventoryArray : Array[Object_Data] = [
 	ResourceLoader.load("res://Objects/globo.tres"),
 	ResourceLoader.load("res://Objects/nariz_payaso.tres")

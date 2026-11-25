@@ -1,14 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://dth42a13t3cv3"]
+[gd_scene load_steps=5 format=3 uid="uid://dth42a13t3cv3"]
 
 [ext_resource type="Script" uid="uid://b7upwrk2qhasd" path="res://Menus/tienda.gd" id="1_n81as"]
+[ext_resource type="Texture2D" uid="uid://3vdn1inn52n2" path="res://Sprites/mercadillo.png" id="2_a62y7"]
 [ext_resource type="Theme" uid="uid://de5w4yfr8tf5e" path="res://Style.tres" id="2_e028t"]
 [ext_resource type="PackedScene" uid="uid://8kobhpnvg82g" path="res://Menus/shop_button.tscn" id="3_p0k1f"]
-
-[sub_resource type="Gradient" id="Gradient_e028t"]
-colors = PackedColorArray(0, 1, 0, 1, 0, 1, 1, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_p0k1f"]
-gradient = SubResource("Gradient_e028t")
 
 [node name="Tienda" type="Control"]
 layout_mode = 3
@@ -19,28 +14,46 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_n81as")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="Mercadillo" type="Sprite2D" parent="."]
+position = Vector2(576, 323.99997)
+scale = Vector2(0.926045, 0.8744939)
+texture = ExtResource("2_a62y7")
+
+[node name="MarginContainer2" type="MarginContainer" parent="."]
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = 1
+anchor_left = 1.0
 anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = SubResource("GradientTexture2D_p0k1f")
+offset_left = -77.0
+offset_bottom = 40.0
+grow_horizontal = 0
+theme = ExtResource("2_e028t")
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer2"]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="MarginContainer2/VBoxContainer2"]
+layout_mode = 2
+theme = ExtResource("2_e028t")
+text = "Tu basura"
+horizontal_alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer2/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 30
+
+[node name="ShopButton" parent="MarginContainer2/VBoxContainer2/HBoxContainer2" instance=ExtResource("3_p0k1f")]
+layout_mode = 2
+
+[node name="ShopButton2" parent="MarginContainer2/VBoxContainer2/HBoxContainer2" instance=ExtResource("3_p0k1f")]
+layout_mode = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 0
 offset_left = 76.0
 offset_right = 1076.0
 offset_bottom = 100.0
-
-[node name="Label" type="RichTextLabel" parent="VBoxContainer"]
-custom_minimum_size = Vector2(1000, 100)
-layout_mode = 2
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 70
-text = "Tienda"
-horizontal_alignment = 1
 
 [node name="Label2" type="RichTextLabel" parent="VBoxContainer"]
 custom_minimum_size = Vector2(1000, 100)
@@ -63,58 +76,39 @@ grow_horizontal = 2
 grow_vertical = 0
 text = "Siguiente pelea"
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+[node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
-anchors_preset = 8
+anchors_preset = 7
 anchor_left = 0.5
-anchor_top = 0.5
+anchor_top = 1.0
 anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
+anchor_bottom = 1.0
+offset_left = -16.0
+offset_top = -8.0
+offset_right = 16.0
 grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Label" type="Label" parent="VBoxContainer2"]
-layout_mode = 2
+grow_vertical = 0
 theme = ExtResource("2_e028t")
-text = "Basura disponible"
-horizontal_alignment = 1
+theme_override_constants/margin_bottom = 95
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer2"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
-
-[node name="ShopButton" parent="VBoxContainer2/HBoxContainer" instance=ExtResource("3_p0k1f")]
-layout_mode = 2
-
-[node name="ShopButton2" parent="VBoxContainer2/HBoxContainer" instance=ExtResource("3_p0k1f")]
-layout_mode = 2
-
-[node name="ShopButton3" parent="VBoxContainer2/HBoxContainer" instance=ExtResource("3_p0k1f")]
-layout_mode = 2
-
-[node name="Label2" type="Label" parent="VBoxContainer2"]
-layout_mode = 2
 theme = ExtResource("2_e028t")
-text = "Tu basura"
-horizontal_alignment = 1
+theme_override_constants/separation = 200
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer2"]
-layout_mode = 2
-size_flags_horizontal = 4
-
-[node name="ShopButton" parent="VBoxContainer2/HBoxContainer2" instance=ExtResource("3_p0k1f")]
+[node name="ShopButton" parent="MarginContainer/HBoxContainer" instance=ExtResource("3_p0k1f")]
 layout_mode = 2
 
-[node name="ShopButton2" parent="VBoxContainer2/HBoxContainer2" instance=ExtResource("3_p0k1f")]
+[node name="ShopButton2" parent="MarginContainer/HBoxContainer" instance=ExtResource("3_p0k1f")]
 layout_mode = 2
 
+[node name="ShopButton3" parent="MarginContainer/HBoxContainer" instance=ExtResource("3_p0k1f")]
+layout_mode = 2
+
+[connection signal="send_data" from="MarginContainer2/VBoxContainer2/HBoxContainer2/ShopButton" to="." method="_on_inventory_button_send_data"]
+[connection signal="send_data" from="MarginContainer2/VBoxContainer2/HBoxContainer2/ShopButton2" to="." method="_on_inventory_button_send_data"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
-[connection signal="send_data" from="VBoxContainer2/HBoxContainer/ShopButton" to="." method="_on_shop_button_send_data"]
-[connection signal="send_data" from="VBoxContainer2/HBoxContainer/ShopButton2" to="." method="_on_shop_button_send_data"]
-[connection signal="send_data" from="VBoxContainer2/HBoxContainer/ShopButton3" to="." method="_on_shop_button_send_data"]
-[connection signal="send_data" from="VBoxContainer2/HBoxContainer2/ShopButton" to="." method="_on_inventory_button_send_data"]
-[connection signal="send_data" from="VBoxContainer2/HBoxContainer2/ShopButton2" to="." method="_on_inventory_button_send_data"]
+[connection signal="send_data" from="MarginContainer/HBoxContainer/ShopButton" to="." method="_on_shop_button_send_data"]
+[connection signal="send_data" from="MarginContainer/HBoxContainer/ShopButton2" to="." method="_on_shop_button_send_data"]
+[connection signal="send_data" from="MarginContainer/HBoxContainer/ShopButton3" to="." method="_on_shop_button_send_data"]

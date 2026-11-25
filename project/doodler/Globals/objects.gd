@@ -1,5 +1,29 @@
 extends Node
 
+const ENEMIES : Array[String] = [
+	"aranha",
+	"boblin",
+	"hataud",
+	"eskeleton",
+	"demoño",
+	"maguito",
+	"magordito",
+	"cofre",
+	"mimic",
+	"puingino",
+	"pallaso",
+	"trex",
+	"biltm",
+	"acuaman",
+	"roberto",
+	"67",
+	"labubu",
+	"oy"
+]
+
+func get_random_enemy() -> Enemy_Data:
+	return ResourceLoader.load("res://Enemies/" + ENEMIES.pick_random() + ".tres")
+
 func get_all_objects() -> Array[Object_Data]:
 	var ret : Array[Object_Data] = []
 	

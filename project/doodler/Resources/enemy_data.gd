@@ -7,12 +7,13 @@ extends Resource
 @export var texture : Texture2D = Texture2D.new()
 @export var tag : Texture2D = Texture2D.new()
 @export var icon : Texture2D = Texture2D.new()
+@export var show_name : String = ""
 
-
-func _init(_max_HP : int = 0, _strength : int = 0, _abilities : Array[Object_Data] = [], _texture : Texture2D = Texture2D.new(), _tag : Texture2D = Texture2D.new(), _icon : Texture2D = Texture2D.new()) -> void:
+func _init(_max_HP : int = 0, _strength : int = 0, _abilities : Array[Object_Data] = [], _texture : Texture2D = Texture2D.new(), _tag : Texture2D = Texture2D.new(), _icon : Texture2D = Texture2D.new(), _show_name : String = "") -> void:
 	self.max_HP = _max_HP
 	self.strength = _strength
 	self.abilities = _abilities
 	self.texture = _texture
 	self.tag = _tag
 	self.icon = _icon
+	self.show_name = _show_name

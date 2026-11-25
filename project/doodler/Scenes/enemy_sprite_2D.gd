@@ -1,29 +1,16 @@
 extends FighterSprite2D
 class_name EnemySprite2D
 
-@export_enum("aranha",
-	"boblin",
-	"hataud",
-	"eskeleton",
-	"demoño",
-	"maguito",
-	"magordito",
-	"cofre",
-	"mimic",
-	"puingino",
-	"pallaso",
-	"trex",
-	"biltm",
-	"acuaman",
-	"roberto",
-	"67",
-	"labubu",
-	"oy") var enemy : String = "boblin" # Por defecto se autoasigna el primer enemigo
+@export var enemy : String = "boblin" # Por defecto se autoasigna el primer enemigo
+
+var show_name : String = ""
 
 func _ready() -> void:
 	# Si hay alguien a quien cargar, buscamos sus estadisticas
 	if enemy != "":
 		var data : Enemy_Data = ResourceLoader.load("res://Enemies/" + enemy + ".tres")
+		
+		self.show_name = data.show_name
 		
 		$Control/Icon.set_texture(data.icon)
 		$Tag.set_texture(data.tag)

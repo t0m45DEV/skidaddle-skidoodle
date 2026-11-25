@@ -1,7 +1,6 @@
 extends Control
 
-@onready var shop_options : HBoxContainer = $VBoxContainer2/HBoxContainer
-
+@onready var shop_options : HBoxContainer = $MarginContainer/HBoxContainer
 func _ready() -> void:
 	var all_objects : Array[Object_Data] = Objects.get_all_objects()
 	
@@ -14,8 +13,8 @@ func _ready() -> void:
 		button.update_data(obj)
 		#all_objects.erase(obj)
 	
-	for i in range($VBoxContainer2/HBoxContainer2.get_children().size()):
-		var i_button : Button = $VBoxContainer2/HBoxContainer2.get_child(i)
+	for i in range($MarginContainer2/VBoxContainer2/HBoxContainer2.get_children().size()):
+		var i_button : Button = $MarginContainer2/VBoxContainer2/HBoxContainer2.get_child(i)
 		
 		if i < Inventory.inventoryArray.size():
 			i_button.update_data(Inventory.inventoryArray[i])

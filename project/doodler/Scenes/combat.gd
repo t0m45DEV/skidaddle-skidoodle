@@ -29,6 +29,15 @@ func disable_buttons() -> void:
 	special2_button.disabled = true
 
 func _ready() -> void:
+	var new_enemy : Enemy_Data = Objects.get_random_enemy()
+	
+	while (new_enemy.show_name in Inventory.combat_history):
+		print(new_enemy.show_name)
+		new_enemy = Objects.get_random_enemy()
+	
+	enemy.enemy = new_enemy.show_name
+	enemy._ready()
+	
 	attack_button.update_state("Ataque")
 	heal_button.update_state("Cura")
 	
@@ -89,6 +98,7 @@ func _on_animation_player_animation_finished(_anim_name: StringName) -> void:
 func _on_enemy_died() -> void:
 	player_won = true
 	enemy_won = false
+	Inventory.combat_history.append(enemy.show_name)
 
 func _on_player_died() -> void:
 	player_won = false
