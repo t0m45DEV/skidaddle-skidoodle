@@ -15,4 +15,5 @@ abilities = Array[ExtResource("1_1ruyi")]([ExtResource("2_8fn6a")])
 texture = ExtResource("5_ghyqk")
 tag = ExtResource("4_8fn6a")
 icon = ExtResource("2_voxmj")
+show_name = "67"
 metadata/_custom_type_script = "uid://b6si3q6ywg50d"

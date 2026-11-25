@@ -17,3 +17,4 @@ abilities = Array[ExtResource("1_mt5ws")]([ExtResource("2_jrdnj"), ExtResource("
 texture = ExtResource("8_1xbng")
 tag = ExtResource("7_juluw")
 icon = ExtResource("5_dxtci")
+show_name = "eskeleton"

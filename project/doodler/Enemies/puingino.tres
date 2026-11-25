@@ -16,4 +16,5 @@ abilities = Array[ExtResource("1_nx4k8")]([ExtResource("2_xd7ij"), ExtResource("
 texture = ExtResource("5_xd7ij")
 tag = ExtResource("4_sbsax")
 icon = ExtResource("2_3cgo3")
+show_name = "puingino"
 metadata/_custom_type_script = "uid://b6si3q6ywg50d"

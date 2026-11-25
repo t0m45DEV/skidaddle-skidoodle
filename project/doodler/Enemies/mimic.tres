@@ -11,4 +11,5 @@ script = ExtResource("2_64tqv")
 texture = ExtResource("5_43owk")
 tag = ExtResource("4_8j5ik")
 icon = ExtResource("2_sfoi3")
+show_name = "mimic"
 metadata/_custom_type_script = "uid://b6si3q6ywg50d"

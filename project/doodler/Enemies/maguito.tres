@@ -11,4 +11,5 @@ script = ExtResource("2_etu8p")
 texture = ExtResource("5_3bbcd")
 tag = ExtResource("4_ca44k")
 icon = ExtResource("2_ca44k")
+show_name = "maguito"
 metadata/_custom_type_script = "uid://b6si3q6ywg50d"

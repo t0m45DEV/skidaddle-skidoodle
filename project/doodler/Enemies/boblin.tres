@@ -16,4 +16,5 @@ abilities = Array[ExtResource("1_7h7tw")]([ExtResource("2_hywyo"), ExtResource("
 texture = ExtResource("5_hywyo")
 tag = ExtResource("4_ng28h")
 icon = ExtResource("2_qi7mt")
+show_name = "boblin"
 metadata/_custom_type_script = "uid://b6si3q6ywg50d"
